@@ -1,0 +1,4 @@
+curl -X POST http://localhost:8080/api/v1/dashboard/add-service ^
+  -H "Content-Type: application/json" ^
+  -H "Cookie: jwt=eyJhbGciOiJIUzI1NiJ9.eyJpc1N0dWRpbyI6dHJ1ZSwic3ViIjoiZHQzQGUuYyIsImlhdCI6MTc3ODY5ODY2OCwiZXhwIjoxNzc4NzM0NjY4fQ.zgAtrwryl_ucOZi3z5E6qaUb9VWleS3wP19EEM2J3D4" ^
+  -d '{"id":null,"name":"Haircut","time":"30 min","extra":"Includes wash","price":"25"}'

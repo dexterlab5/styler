@@ -1,0 +1,31 @@
+Is that supposed to slide with finger or mouse?
+
+<section className="bg-white rounded-2xl border border-slate-200 overflow-hidden mb-8">
+                {/* Header */}
+                <div className="p-6 border-b border-slate-100 flex justify-between items-center">
+                    <h2 className="text-xl font-bold text-slate-800">Time</h2>
+                </div>
+                <div className="w-full max-w-md p-4">
+                    <div className="flex gap-10">
+                        {available.map((time, i) =>
+                            <>
+                                {terminTime == time ?
+                                    <div>
+                                        <div className="w-[60px] h-[80px] border border-slate-200 rounded-l cursor-pointer"
+                                            onClick={() => setTerminTime(time)}>
+                                            <h4 className="text-l font-medium text-gray-500 text-center bg-violet-300">{time.hour}:{time.minutes}</h4>
+                                        </div>
+                                    </div>
+                                    :
+                                    <div>
+                                        <div className="w-[60px] h-[80px] border border-slate-200 rounded-l cursor-pointer"
+                                            onClick={() => setTerminTime(time)}>
+                                            <h4 className="text-l font-medium text-gray-500 text-center bg-green-300">{time.hour}:{time.minutes}</h4>
+                                        </div>
+                                    </div>
+                                }
+                            </>
+                        )}
+                    </div>
+                </div>
+            </section>
