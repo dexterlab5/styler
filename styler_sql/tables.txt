@@ -1,0 +1,19 @@
+Make table for mysql:
+
+user(id, name, email, password(bcrypt)
+studio(id, name, user_id (fk)
+artist(id, name, role, yearsExp, studio_id (fk))
+service(id, name, time, extra, price, studio_id (fk))
+termin(id, user_id (fk), studio_id (fk), artist_id (fk), service_id, year, month, day, time, note)
+
+
+everything is strings except ids and fks, just make sure I can implement them as entities in Spring Boot.
+
+
+
+studio - user => one to one
+artist - studio => many to one
+service - studio => many to one
+termin - user - studio - artist - service - one to one for every
+
+// fetch the foreign entities manually
